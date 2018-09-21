@@ -30,9 +30,16 @@ public class UserController
 		user.setUsername(userViewModel.getUsername());
 		user.setPassword(userViewModel.getPassword());
 		user.setPassword(userViewModel.getRepeatPassword());
+		
 		user.setFirstQuestion(userViewModel.getFirstQuestion());
+		user.setFirstAnswer(userViewModel.getFirstAnswer());
+		
 		user.setSecondQuestion(userViewModel.getSecondQuestion());
+		user.setSecondAnswer(userViewModel.getSecondAnswer());
+		
 		user.setThirdQuestion(userViewModel.getThirdQuestion());
+		user.setThirdAnswer(userViewModel.getThirdAnswer());
+		
 		userRepo.save(user);
 		return "result";
 	}
